@@ -1,0 +1,765 @@
+    /* Base Styles */
+    body {
+        font-family: 'Poppins', sans-serif; /* Use Poppins font */
+        line-height: 1.6;
+        color: #000000; /* Text color */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        background: #f7f9fc; /* Light background for the whole page */
+    }
+
+    /* Header Styles */
+    header {
+        display: flex; /* Use flexbox for layout */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Space items evenly */
+        padding: 10px 20px; /* Add padding to the header */
+        background: #1a055a; /* White background for the header */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    /* Navigation Styles */
+    nav ul {
+        list-style: none; /* Remove bullet points from the list */
+        padding: 0; /* Remove padding */
+        display: flex; /* Flexbox for horizontal alignment */
+    }
+
+    nav ul li {
+        margin: 0 15px; /* Spacing between links */
+    }
+
+    nav ul li a {
+        text-decoration: none; /* Remove underline */
+        color: #ffffff; /* Link color */
+        font-weight: 500; /* Medium font weight */
+        transition: color 0.3s; /* Smooth transition for color */
+    }
+
+    nav ul li a:hover {
+        color: #1a055a; /* Darker shade on hover */
+    }
+
+    /* Hero Section Styles */
+    .hero {
+        text-align: center;
+        padding: 50px 20px; /* Added padding for spacing */
+        background: #c7dbf0; /* Light blue background */
+    }
+
+    .animated-title {
+        font-size: 2.5em; /* Larger font size */
+        margin: 20px 0;
+        color: #1a055a; /* Aesthetic color */
+        animation: fadeIn 1s ease-in-out; /* Animation effect */
+    }
+
+    .animated-text {
+        font-size: 1.2em; /* Slightly larger font size */
+        margin: 10px 0;
+        animation: slideIn 1.5s ease-in-out; /* Animation effect */
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px); /* Move up */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0); /* Final position */
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px); /* Slide in from left */
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0); /* Final position */
+        }
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Profile Photo Styles */
+    .profile-photo {
+        width: 150px; /* Set width of the photo */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Make the photo circular */
+        margin: 20px 0; /* Margin above and below the photo */
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a cool shadow effect */
+    }
+
+    .profile-photo:hover {
+        transform: scale(1.1); /* Scale up the photo on hover */
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Section Styles */
+    .introduction,
+    .skills-summary,
+    .contact {
+        text-align: center; /* Center the text */
+        margin: 20px 0; /* Margin for spacing */
+    }
+
+    .introduction h2,
+    .skills-summary h2,
+    .contact h2 {
+        font-size: 2em; /* Larger font size for section headers */
+        margin: 20px 0; /* Margin above and below */
+        color: #1a055a; /* Aesthetic color for headers */
+    }
+
+    /* Skills List Styles */
+    .skills-summary ul {
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove padding */
+    }
+
+    .skills-summary li {
+        font-size: 1.1em; /* Slightly larger font size for skills */
+    }
+
+    /* CTA Button Styles */
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #1a055a; /* Button color */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        margin-top: 20px; /* Space above button */
+    }
+
+    .cta-button:hover {
+        background: #1a055a; /* Darker shade on hover */
+        transform: scale(1.05); /* Scale up button on hover */
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Contact Form Styles */
+    .contact form {
+        display: flex; /* Use flexbox for form layout */
+        flex-direction: column; /* Arrange items in a column */
+        max-width: 400px; /* Limit width of the form */
+        margin: 0 auto; /* Center the form */
+    }
+
+    .contact label {
+        margin: 10px 0 5px; /* Margin for spacing */
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: 10px; /* Padding inside input fields */
+        border: 1px solid #ddd; /* Light border */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    .contact button {
+        margin-top: 15px; /* Space above button */
+    }
+
+    /* Project Item Styles */
+    .project-item {
+        background: #fff; /* White background */
+        margin: 15px; /* Margin around each project item */
+        padding: 20px; /* Padding inside project item */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    /* Footer Styles */
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #f1f1f1;
+        position: relative; /* Keep footer at the bottom */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 30px 10px; /* Adjust padding for smaller screens */
+        }
+        
+        .animated-title {
+            font-size: 2em; /* Smaller font size for smaller screens */
+        }
+
+        .profile-photo {
+            width: 120px; /* Smaller photo for smaller screens */
+        }
+
+        .cta-button {
+            padding: 8px 16px; /* Adjust button padding for smaller screens */
+        }
+
+        .contact form {
+            max-width: 90%; /* Use more space on smaller screens */
+        }
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* About Section Styles */
+    .about {
+        text-align: center; /* Center the text */
+        padding: 50px 20px; /* Padding for spacing */
+        background: #e7f3ff; /* Light blue background for the about section */
+    }
+
+    .profile-photo-about {
+        width: 200px; /* Set width of the profile photo */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Make the photo circular */
+        margin: 20px 0; /* Margin above and below the photo */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Cool shadow effect */
+        animation: fadeIn 1s ease-in-out; /* Animation effect for the photo */
+    }
+
+    .fun-facts {
+        list-style-type: disc; /* Bullet points for fun facts */
+        margin: 20px auto; /* Center the list */
+        padding: 0; /* Remove padding */
+        max-width: 400px; /* Limit width of the list */
+    }
+
+    .fun-facts li {
+        font-size: 1.1em; /* Slightly larger font size for list items */
+        margin: 10px 0; /* Margin for spacing between items */
+    }
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Animation for text */
+    .animated-text {
+        opacity: 0; /* Initial opacity for fade-in effect */
+        transform: translateY(20px); /* Move down for effect */
+        animation: fadeInUp 1s forwards; /* Animate to fade in */
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1; /* Final opacity */
+            transform: translateY(0); /* Move to final position */
+        }
+    }
+
+    /* Projects Section Styles */
+    .projects {
+        padding: 50px 20px; /* Padding for spacing */
+        text-align: center; /* Center the text */
+        background: #e7f3ff; /* Light blue background for the projects section */
+    }
+
+    .project-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack project items vertically */
+        align-items: center; /* Center align the project items */
+        max-width: 800px; /* Limit the maximum width of the container */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .project-item {
+        background: #fff; /* White background for each project */
+        margin: 20px 0; /* Margin around each project item */
+        padding: 20px; /* Padding inside each project */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        transition: transform 0.3s; /* Smooth transform transition */
+        width: 100%; /* Full width for project item */
+        max-width: 500px; /* Limit width for better appearance */
+    }
+
+    .project-item:hover {
+        transform: scale(1.05); /* Scale up project item on hover */
+    }
+
+    .project-title {
+        font-size: 1.5em; /* Larger font size for project titles */
+        margin: 15px 0; /* Margin for spacing */
+        color: #4A90E2; /* Color for project titles */
+    }
+
+    .project-image {
+        width: 100%; /* Full width for the project image */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Rounded corners for images */
+        margin: 15px 0; /* Margin for spacing */
+    }
+
+    .project-description {
+        font-size: 1.1em; /* Slightly larger font size for descriptions */
+        margin: 10px 0; /* Margin for spacing */
+    }
+
+ /*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Skills Section Styles */
+    .skills {
+        padding: 50px 20px; /* Padding for spacing */
+        text-align: center; /* Center the text */
+        background: #e7f3ff; /* Light blue background for the skills section */
+    }
+
+    .skills-container {
+        max-width: 800px; /* Limit the maximum width of the container */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .skill-item {
+        margin: 20px 0; /* Margin around each skill item */
+    }
+
+    .skill-name {
+        font-size: 1.5em; /* Larger font size for skill names */
+        color: #1a055a; /* Color for skill names */
+        margin-bottom: 10px; /* Margin below skill names */
+    }
+
+    .skill-bar {
+        background: #ddd; /* Light gray background for the skill bar */
+        border-radius: 5px; /* Rounded corners for the skill bar */
+        overflow: hidden; /* Hide overflow for the progress effect */
+        height: 30px; /* Height of the skill bar */
+        width: 100%; /* Full width for the skill bar */
+    }
+
+    .skill-level {
+        height: 100%; /* Full height for skill levels */
+        border-radius: 5px; /* Rounded corners for skill level */
+        transition: width 0.5s ease-in-out; /* Smooth transition for width */
+    }
+
+    /* Skill level widths */
+    .html-level {
+        width: 100%; /* Example width for HTML skill */
+        background: #F16529; /* Color for HTML */
+    }
+
+    .css-level {
+        width: 100%; /* Example width for CSS skill */
+        background: #1a055a; /* Color for CSS */
+    }
+
+    .js-level {
+        width: 100%; /* Example width for JavaScript skill */
+        background: #F7DF1E; /* Color for JavaScript */
+    }
+
+    .react-level {
+        width: 100%; /* Example width for React skill */
+        background: #61DAFB; /* Color for React */
+    }
+
+    .nodejs-level {
+        width: 100%; /* Example width for Node.js skill */
+        background: #68A063; /* Color for Node.js */
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+   /* Contact Section Styles */
+.contact {
+    text-align: center; /* Center the text */
+    background: #e7f3ff; /* Light blue background for the contact section */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    display: flex; /* Use flexbox to center the content */
+    flex-direction: column; /* Align content in a column */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove margin to avoid extra space */
+    overflow: hidden; /* Prevent any scrolling */
+}
+
+/* Title Styling */
+.contact h1 {
+    font-size: 2em; /* Large title font size */
+    color: #1a055a; /* Title color */
+}
+
+/* Paragraph Styling */
+.contact p {
+    font-size: 1.2em; /* Font size for instructions */
+    margin-bottom: 20px; /* Margin below paragraph */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    width: 80%; /* Set width to a reasonable percentage to prevent overflow */
+    max-width: 900px; /* Max width to prevent stretching too wide */
+    margin: 0 auto; /* Center the form */
+    background: #fff; /* White background for the form */
+    padding: 50px; /* Large padding inside the form */
+    border-radius: 5px; /* Rounded corners for the form */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Larger shadow effect */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin: 15px 0; /* Margin around each form field */
+}
+
+/* Label Styles */
+label {
+    display: block; /* Make label a block element */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: 500; /* Bold labels */
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width for inputs and text area */
+    padding: 10px; /* Padding for input fields */
+    border: 1px solid #1a055a; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    font-size: 1em; /* Font size for input fields */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Placeholder Styles */
+input::placeholder,
+textarea::placeholder {
+    color: #1a055a; /* Placeholder color */
+}
+
+/* Submit Button Styles */
+.submit-button {
+    background: #031529; /* Blue background for button */
+    color: white; /* White text for button */
+    border: none; /* No border for button */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for button */
+    transition: background 0.3s; /* Transition for background color */
+}
+
+
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    background: #f7f9fc;
+    box-sizing: border-box;
+}
+
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+
+
+/* Blog Section Styles */
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 20px;
+    background: #e7f3ff;
+    width: 100%; /* Ensure full width without causing overflow */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Title Styling */
+.animated-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a055a;
+    padding-top: 20px;
+}
+
+/* Description */
+.blog .description {
+    max-width: 600px;
+    font-size: 1.2em;
+    color: #1a055a;
+    margin-top: 20px;
+}
+
+/* Form Styling */
+.blog form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+/* Form input and textarea styling */
+.blog input, .blog textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button styling */
+.blog button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a055a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.blog button:hover {
+    background-color: #5c2c8e;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+    /* Services Section Styles */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top of the container */
+    text-align: center; /* Center text */
+    padding: 20px;
+    background-color: #e7f3ff;
+    width: 100%; /* Ensure full width without causing overflow */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+.animated-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a055a;
+    padding-top: 20px;
+}
+
+/* Service Item Styling */
+.service-item {
+    max-width: 600px;
+    margin: 20px 0; /* Add spacing between service items */
+}
+
+/* Service Item Title */
+.service-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Service Item Description */
+.service-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+/* Team Section Styles */
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    background-color: #e7f3ff;
+    width: 100%; /* Ensure full width without causing overflow */
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+.team h1.animated-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a055a;
+}
+
+/* Team Member Styles */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Adds a subtle hover effect */
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.team-member h2 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    .team {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+
+/* Clients Section Styles */
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top of the container */
+    text-align: center; /* Center text */
+    padding: 20px;
+    background-color: #e7f3ff; /* Same background color as services */
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+.animated-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a055a;
+    padding-top: 20px;
+}
+
+/* Clients Section Styles */
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    text-align: center; 
+    padding: 20px;
+    background-color: #e7f3ff;
+    width: 100%; 
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+.animated-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a055a;
+    padding-top: 20px;
+}
+
+/* Client Item Styling */
+.client-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;  /* Let the container grow to fit content */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.client-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Full-width Client Logo */
+.client-item img {
+    width: 100%;
+    max-height: 200px;  /* Keep the height reasonable */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Client Name */
+.client-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Client Description */
+.client-item p {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    padding: 0 10px;  /* Optional: Add padding to keep text away from edges */
+    margin: 0;  /* Prevent additional margins that could cause overflow */
+    overflow-wrap: break-word;  /* Ensure long words are wrapped */
+    word-wrap: break-word;  /* For older browsers */
+    height: auto;  /* Allow paragraph height to adjust as needed */
+    max-height: 150px;  /* Optional: Limit height to avoid overflow if needed */
+    overflow-y: auto;  /* Allow scrolling if text overflows */
+}
