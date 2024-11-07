@@ -37,8 +37,20 @@
     }
 
     nav ul li a:hover {
-        color: #1a055a; /* Darker shade on hover */
+        color: #ff5a5a; /* Darker shade on hover */
     }
+   /* Active Link Styles */
+nav ul li a.active {
+    color: #ff5a5a; /* Red color for active link */
+    font-weight: bold; /* Optional: Make it bold for emphasis */
+}
+
+/* Ensure smooth transition */
+nav ul li a {
+    transition: color 0.3s ease;
+}
+
+
 
     /* Hero Section Styles */
     .hero {
@@ -146,68 +158,90 @@
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
-    /* Contact Form Styles */
-    .contact form {
-        display: flex; /* Use flexbox for form layout */
-        flex-direction: column; /* Arrange items in a column */
-        max-width: 400px; /* Limit width of the form */
-        margin: 0 auto; /* Center the form */
-    }
+/* Header Top with Navigation and Social Media Links */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Space out the navigation and social links */
+    align-items: center; /* Vertically center the items */
+    padding: 20px; /* Add padding around the header content */
+    background-color: #f1f1f1; /* Optional: background color for the header */
+}
 
-    .contact label {
-        margin: 10px 0 5px; /* Margin for spacing */
-    }
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    .contact input,
-    .contact textarea {
-        padding: 10px; /* Padding inside input fields */
-        border: 1px solid #ddd; /* Light border */
-        border-radius: 5px; /* Rounded corners */
-    }
+nav ul li {
+    margin-right: 20px; /* Space between navigation links */
+}
 
-    .contact button {
-        margin-top: 15px; /* Space above button */
-    }
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-weight: 500;
+}
 
-    /* Project Item Styles */
-    .project-item {
-        background: #fff; /* White background */
-        margin: 15px; /* Margin around each project item */
-        padding: 20px; /* Padding inside project item */
-        border-radius: 5px; /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    }
+nav ul li a:hover {
+    color: #007bff; /* Change color on hover */
+}
 
-    /* Footer Styles */
-    footer {
-        text-align: center;
-        padding: 20px 0;
-        background: #f1f1f1;
-        position: relative; /* Keep footer at the bottom */
-    }
+.social-links-container {
+    display: flex;
+    justify-content: flex-end; /* Align social icons to the right */
+}
 
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        .hero {
-            padding: 30px 10px; /* Adjust padding for smaller screens */
-        }
-        
-        .animated-title {
-            font-size: 2em; /* Smaller font size for smaller screens */
-        }
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
 
-        .profile-photo {
-            width: 120px; /* Smaller photo for smaller screens */
-        }
+.social-icon:hover {
+    transform: scale(1.1);
+}
 
-        .cta-button {
-            padding: 8px 16px; /* Adjust button padding for smaller screens */
-        }
+/* Specific Social Media Icon Styles */
+.social-icon.facebook {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+}
 
-        .contact form {
-            max-width: 90%; /* Use more space on smaller screens */
-        }
-    }
+.social-icon.instagram {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+}
+
+.social-icon.x {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e8/X_logo_2023.svg');
+}
+
+/* Contact Form Styles */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact label {
+    margin: 10px 0 5px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 15px;
+}
+
 
     /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
@@ -597,73 +631,6 @@ body {
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
-/* Team Section Styles */
-.team {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding: 20px;
-    background-color: #e7f3ff;
-    width: 100%; /* Ensure full width without causing overflow */
-    min-height: 100vh; /* Full viewport height */
-    box-sizing: border-box;
-}
-
-.team h1.animated-title {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #1a055a;
-}
-
-/* Team Member Styles */
-.team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 250px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-10px); /* Adds a subtle hover effect */
-}
-
-.team-member img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover;
-}
-
-.team-member h2 {
-    font-size: 1.25rem;
-    color: #333;
-    margin: 10px 0 5px;
-}
-
-.team-member p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Responsive Layout */
-@media (min-width: 768px) {
-    .team {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-/*--------------------------------------------------------------------------------------------------------------------------------------------/*
-
 
 /* Clients Section Styles */
 .clients {
@@ -762,4 +729,168 @@ body {
     height: auto;  /* Allow paragraph height to adjust as needed */
     max-height: 150px;  /* Optional: Limit height to avoid overflow if needed */
     overflow-y: auto;  /* Allow scrolling if text overflows */
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+/* Styling the overall post container */
+.post1-post {
+    background-color: #e7f3ff; /* Set background color */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+}
+
+/* New container for title and description */
+.post1-content {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    max-width: 800px; /* Limit width of the container */
+    width: 100%; /* Full width within the max width */
+    max-height: 80vh; /* Limit the height of the container */
+    overflow: auto; /* Add scroll if the content exceeds max height */
+    word-wrap: break-word; /* Ensure long words break to fit within the container */
+}
+
+/* Styling for the title */
+.animated-title {
+    font-size: 2.5em; /* Large font size for the title */
+    font-weight: 700; /* Bold font for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Styling for the blog content */
+.blog-content {
+    font-size: 1.2em; /* Slightly larger font for the blog content */
+    line-height: 1.6; /* Space between lines */
+    color: #333; /* Dark color for readability */
+    margin-top: 10px; /* Space between content and title */
+    max-width: 100%; /* Ensure text does not overflow the container */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+
+
+/* Styling the overall post container */
+.post2-post {
+    background-color: #e7f3ff; /* Set background color */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+}
+
+/* New container for title and description */
+.post2-content {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    max-width: 800px; /* Limit width of the container */
+    width: 100%; /* Full width within the max width */
+    max-height: 80vh; /* Limit the height of the container */
+    overflow: auto; /* Add scroll if the content exceeds max height */
+    word-wrap: break-word; /* Ensure long words break to fit within the container */
+}
+
+/* Styling for the title */
+.animated-title {
+    font-size: 2.5em; /* Large font size for the title */
+    font-weight: 700; /* Bold font for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Styling for the blog content */
+.blog-content {
+    font-size: 1.2em; /* Slightly larger font for the blog content */
+    line-height: 1.6; /* Space between lines */
+    color: #333; /* Dark color for readability */
+    margin-top: 10px; /* Space between content and title */
+    max-width: 100%; /* Ensure text does not overflow the container */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+/* Back Button Styles */
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a055a; /* Same color as header */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10; /* Ensure it's on top of other elements */
+}
+
+.back-link:hover {
+    background-color: #ff5a5a; /* Change to hover color */
+}
+
+/* General Body and Layout */
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #ff5a5a;
+}
+
+.post1-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.animated-title {
+    font-size: 2.5em;
+    color: #1a055a;
+}
+
+.blog-content {
+    font-size: 1.2em;
+    color: #333;
 }
