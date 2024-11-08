@@ -113,21 +113,36 @@ nav ul li a {
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
-    /* Section Styles */
-    .introduction,
-    .skills-summary,
-    .contact {
-        text-align: center; /* Center the text */
-        margin: 20px 0; /* Margin for spacing */
-    }
+   /* Section Styles */
+.introduction,
+.skills-summary,
+.contact {
+    text-align: center; /* Center the text */
+    margin: 40px 0; /* Increase margin for better section spacing */
+}
 
-    .introduction h2,
-    .skills-summary h2,
-    .contact h2 {
-        font-size: 2em; /* Larger font size for section headers */
-        margin: 20px 0; /* Margin above and below */
-        color: #1a055a; /* Aesthetic color for headers */
-    }
+.introduction h2,
+.skills-summary h2,
+.contact h2 {
+    font-size: 2em; /* Slightly larger font size for section headers */
+    margin: 30px 0; /* Increased margin above and below for better separation */
+    color: #1a055a; /* Aesthetic color for headers */
+    font-weight: 700; /* Bold headers for emphasis */
+    text-transform: uppercase; /* Uppercase for a more modern look */
+    letter-spacing: 2px; /* Added letter-spacing for clarity */
+}
+
+/* For paragraphs or additional text inside these sections */
+.introduction p,
+.skills-summary p,
+.contact p {
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+    line-height: 1.6; /* Increased line height for better readability */
+    max-width: 850px; /* Set a max width for better text alignment */
+    margin: 15px auto; /* Center the text block with margin */
+    padding: 0 20px; /* Padding to prevent text from touching the sides */
+    color: #333; /* Set a soft dark color for text */
+}
 
     /* Skills List Styles */
     .skills-summary ul {
@@ -219,6 +234,8 @@ nav ul li a:hover {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e8/X_logo_2023.svg');
 }
 
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
 /* Contact Form Styles */
 .contact form {
     display: flex;
@@ -245,33 +262,77 @@ nav ul li a:hover {
 
     /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
-    /* About Section Styles */
-    .about {
-        text-align: center; /* Center the text */
-        padding: 50px 20px; /* Padding for spacing */
-        background: #e7f3ff; /* Light blue background for the about section */
-    }
+   /* About Section Styles */
+.about {
+    text-align: center; /* Center the text */
+    padding: 50px 20px; /* Padding for spacing */
+    background: #e7f3ff; /* Light blue background for the about section */
+    font-family: 'Poppins', sans-serif; /* Apply the font globally */
+    color: #333; /* Set text color for better readability */
+}
 
-    .profile-photo-about {
-        width: 200px; /* Set width of the profile photo */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 50%; /* Make the photo circular */
-        margin: 20px 0; /* Margin above and below the photo */
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Cool shadow effect */
-        animation: fadeIn 1s ease-in-out; /* Animation effect for the photo */
-    }
+h1, h2 {
+    font-size: 2.5em; /* Larger headings for better emphasis */
+    font-weight: 700; /* Bold headings */
+    margin-bottom: 20px; /* Space below headings */
+}
 
-    .fun-facts {
-        list-style-type: disc; /* Bullet points for fun facts */
-        margin: 20px auto; /* Center the list */
-        padding: 0; /* Remove padding */
-        max-width: 400px; /* Limit width of the list */
-    }
+h2 {
+    font-size: 2em; /* Slightly smaller font size for the second heading */
+}
 
-    .fun-facts li {
-        font-size: 1.1em; /* Slightly larger font size for list items */
-        margin: 10px 0; /* Margin for spacing between items */
+.profile-photo-about {
+    width: 200px; /* Set width of the photo */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Margin above and below the photo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Cool shadow effect */
+    animation: fadeIn 1s ease-in-out; /* Animation effect for the photo */
+    position: relative; /* Position for pseudo-element */
+    border: 5px solid transparent; /* Transparent border */
+    background-image: linear-gradient(45deg, #00b4d8, #0077b6); /* Gradient border effect */
+    background-clip: content-box; /* Clip the background to the content */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.profile-photo-about::before {
+    content: ""; /* Add content to create the paper effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px dashed #333; /* Dashed border to mimic paper edge */
+    border-radius: 10px; /* Slightly rounded corners for a natural torn effect */
+    z-index: -1; /* Place the dashed border behind the image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth effect */
+}
+
+.profile-photo-about:hover {
+    transform: scale(1.05); /* Slightly enlarge the photo on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+.animated-title {
+    animation: fadeIn 1.5s ease-in-out; /* Animation for titles */
+}
+
+.animated-text {
+    animation: fadeIn 2s ease-in-out; /* Animation for paragraphs */
+    line-height: 1.6; /* Increase line height for better readability */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    max-width: 800px; /* Limit width of text for better alignment */
+    margin: 10px auto; /* Center the text block */
+    padding: 0 20px; /* Padding for text */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------/*
@@ -586,8 +647,109 @@ body {
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
-    /* Services Section Styles */
-.services {
+
+/* Styling the overall post container */
+.post1-post {
+    background-color: #e7f3ff; /* Set background color */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+}
+
+/* New container for title and description */
+.post1-content {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    max-width: 800px; /* Limit width of the container */
+    width: 100%; /* Full width within the max width */
+    max-height: 80vh; /* Limit the height of the container */
+    overflow: auto; /* Add scroll if the content exceeds max height */
+    word-wrap: break-word; /* Ensure long words break to fit within the container */
+}
+
+/* Styling for the title */
+.animated-title {
+    font-size: 2.5em; /* Large font size for the title */
+    font-weight: 700; /* Bold font for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Styling for the blog content */
+.blog-content {
+    font-size: 1.2em; /* Slightly larger font for the blog content */
+    line-height: 1.6; /* Space between lines */
+    color: #333; /* Dark color for readability */
+    margin-top: 10px; /* Space between content and title */
+    max-width: 100%; /* Ensure text does not overflow the container */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+
+
+
+/* Styling the overall post container */
+.post2-post {
+    background-color: #e7f3ff; /* Set background color */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+}
+
+/* New container for title and description */
+.post2-content {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    max-width: 800px; /* Limit width of the container */
+    width: 100%; /* Full width within the max width */
+    max-height: 80vh; /* Limit the height of the container */
+    overflow: auto; /* Add scroll if the content exceeds max height */
+    word-wrap: break-word; /* Ensure long words break to fit within the container */
+}
+
+/* Styling for the title */
+.animated-title {
+    font-size: 2.5em; /* Large font size for the title */
+    font-weight: 700; /* Bold font for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Styling for the blog content */
+.blog-content {
+    font-size: 1.2em; /* Slightly larger font for the blog content */
+    line-height: 1.6; /* Space between lines */
+    color: #333; /* Dark color for readability */
+    margin-top: 10px; /* Space between content and title */
+    max-width: 100%; /* Ensure text does not overflow the container */
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------/*
+  
+
+/* Services Section Styles */
+  .services {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
@@ -731,109 +893,8 @@ body {
     overflow-y: auto;  /* Allow scrolling if text overflows */
 }
 
-
 /*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
-/* Styling the overall post container */
-.post1-post {
-    background-color: #e7f3ff; /* Set background color */
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any padding */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center the text */
-}
-
-/* New container for title and description */
-.post1-content {
-    background-color: #ffffff; /* White background for the container */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 8px; /* Rounded corners for the container */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    max-width: 800px; /* Limit width of the container */
-    width: 100%; /* Full width within the max width */
-    max-height: 80vh; /* Limit the height of the container */
-    overflow: auto; /* Add scroll if the content exceeds max height */
-    word-wrap: break-word; /* Ensure long words break to fit within the container */
-}
-
-/* Styling for the title */
-.animated-title {
-    font-size: 2.5em; /* Large font size for the title */
-    font-weight: 700; /* Bold font for the title */
-    margin-bottom: 20px; /* Space below the title */
-}
-
-/* Styling for the blog content */
-.blog-content {
-    font-size: 1.2em; /* Slightly larger font for the blog content */
-    line-height: 1.6; /* Space between lines */
-    color: #333; /* Dark color for readability */
-    margin-top: 10px; /* Space between content and title */
-    max-width: 100%; /* Ensure text does not overflow the container */
-    word-wrap: break-word; /* Break long words if necessary */
-}
-
-
-
-/*--------------------------------------------------------------------------------------------------------------------------------------------/*
-
-
-
-/* Styling the overall post container */
-.post2-post {
-    background-color: #e7f3ff; /* Set background color */
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any padding */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center the text */
-}
-
-/* New container for title and description */
-.post2-content {
-    background-color: #ffffff; /* White background for the container */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 8px; /* Rounded corners for the container */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    max-width: 800px; /* Limit width of the container */
-    width: 100%; /* Full width within the max width */
-    max-height: 80vh; /* Limit the height of the container */
-    overflow: auto; /* Add scroll if the content exceeds max height */
-    word-wrap: break-word; /* Ensure long words break to fit within the container */
-}
-
-/* Styling for the title */
-.animated-title {
-    font-size: 2.5em; /* Large font size for the title */
-    font-weight: 700; /* Bold font for the title */
-    margin-bottom: 20px; /* Space below the title */
-}
-
-/* Styling for the blog content */
-.blog-content {
-    font-size: 1.2em; /* Slightly larger font for the blog content */
-    line-height: 1.6; /* Space between lines */
-    color: #333; /* Dark color for readability */
-    margin-top: 10px; /* Space between content and title */
-    max-width: 100%; /* Ensure text does not overflow the container */
-    word-wrap: break-word; /* Break long words if necessary */
-}
-
-
-
-
-/*--------------------------------------------------------------------------------------------------------------------------------------------/*
 
 /* Back Button Styles */
 .back-link {
